@@ -40,6 +40,7 @@ var sendResponseEmail = function(email) {
 
 app.post('/', function (req, res){
 
+
   var mailOptions = {
     from: 'website@opencollective.com', // sender address
     to: 'ops@opencollective.com' // list of receivers
@@ -48,9 +49,13 @@ app.post('/', function (req, res){
   var email = req.body.email;
   var source = req.body.source;
 
+  // Adding logging to trace incoming requests better on Heroku logs
+  console.log("Source: ", req.body.source);
+  console.log("Email: ", req.body.email);
+
   // 1st step of registration
   if (!req.body.country) {
-    
+
     mailOptions.subject = 'Invitation request - ' + source;
     mailOptions.text = email + ' Requested to join the beta for OpenCollective';
     mailOptions.html = '<a mailto:'+email+'/>'+email+'</a> Has requested to join OpenCollective';
