@@ -93,9 +93,12 @@ app.use('/public', express.static(__dirname + '/public'))
 
 app.get('*', function (req, res) {
   var parsedUrl = url.parse(req.url);
+  var source = req.body.source;
   var page = parsedUrl.pathname.substr(1) || 'index';
   var filename = page+'.html';
   var filepath = __dirname+'/public/'+filename;
+
+  console.log("Incoming request: ", filepath, " Source: ", source);
   if (fs.existsSync(filepath)) {
     res.sendFile(filepath);
   }
