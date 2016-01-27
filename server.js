@@ -40,6 +40,7 @@ var sendResponseEmail = function(email) {
 
 app.post('/', function (req, res){
 
+
   var mailOptions = {
     from: 'website@opencollective.com', // sender address
     to: 'ops@opencollective.com' // list of receivers
@@ -51,9 +52,13 @@ app.post('/', function (req, res){
   if(!email || !email.match(/.+@.+\..+/))
     return res.send(400);
 
+  // Adding logging to trace incoming requests better on Heroku logs
+  console.log("Source: ", req.body.source);
+  console.log("Email: ", req.body.email);
+
   // 1st step of registration
   if (!req.body.country) {
-    
+
     mailOptions.subject = 'Invitation request - ' + source;
     mailOptions.text = email + ' Requested to join the beta for OpenCollective';
     mailOptions.html = '<a mailto:'+email+'/>'+email+'</a> Has requested to join OpenCollective';
@@ -91,9 +96,12 @@ app.use('/public', express.static(__dirname + '/public'))
 
 app.get('*', function (req, res) {
   var parsedUrl = url.parse(req.url);
+  var source = req.body.source;
   var page = parsedUrl.pathname.substr(1) || 'index';
   var filename = page+'.html';
   var filepath = __dirname+'/public/'+filename;
+
+  console.log("Incoming request: ", filepath, " Source: ", source);
   if (fs.existsSync(filepath)) {
     res.sendFile(filepath);
   }

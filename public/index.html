@@ -437,25 +437,27 @@
 
         <script type="text/javascript">
 
-            var source = 'homepage';
+            var source = getUrlParameter('source') || 'homepage';
 
             var signup = function(e){
+                formId = $(this);
                 e.preventDefault();
                 $.ajax({
                     url:'/',
                     data:$(this).serialize()+'&source='+source,
-                    method: 'post'
+                    method: 'post',
+                    success: function(data) {
+                      ga('send', 'signup');
+                      fbq('track', 'Lead');
+                    }
                 });
-                ga('send', 'signup');
-                fbq('track', 'Lead');
-
                 $('#bottomFormContainer').addClass('hidden');
                 $('#followupContainer').removeClass('hidden');
                 $('html,body').animate({
                     scrollTop: $("#followupContainer").offset().top
                 },'slow');
 
-                var email = $(this).find('input[name=email]').val();
+                var email = formId.find('input[name=email]').val();
                 $('#followupForm').find('input[name=email]').val(email);
             };
 
@@ -472,20 +474,37 @@
                 $.ajax({
                     url:'/',
                     data:$(this).serialize()+'&source='+source,
-                    method: 'post'
+                    method: 'post',
+                    success: function(data) {
+                      ga('send', 'followup');
+                      fbq('track', 'CompleteRegistration');
+                    }
                 });
-                ga('send', 'followup');
-                fbq('track', 'CompleteRegistration');
-                $('#thanksContainer').removeClass('hidden');
-                $('#bottomFormContainer').hide();
+
                 $('#followupContainer').hide();
+                $('#thanksContainer').removeClass('hidden');
                 $('html,body').animate({
                     scrollTop: $("footer").offset().top
                 },'slow');
+
             });
+
             $('#firstForm').on('submit', signup);
             $('#bottomForm').on('submit', signup);
 
+            /* Gets parameters from URL */
+            function getUrlParameter(sParam){
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+
+                for (var i = 0; i < sURLVariables.length; i++){
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam){
+                        return sParameterName[1];
+                    }
+                }
+                return null
+            }
         </script>
 
 <script>
