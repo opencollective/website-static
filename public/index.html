@@ -449,17 +449,16 @@
                     success: function(data) {
                       ga('send', 'signup');
                       fbq('track', 'Lead');
+                    }
+                });
+                $('#bottomFormContainer').addClass('hidden');
+                $('#followupContainer').removeClass('hidden');
+                $('html,body').animate({
+                    scrollTop: $("#followupContainer").offset().top
+                },'slow');
 
-                      $('#bottomFormContainer').addClass('hidden');
-                      $('#followupContainer').removeClass('hidden');
-                      $('html,body').animate({
-                          scrollTop: $("#followupContainer").offset().top
-                      },'slow');
-
-                      var email = formId.find('input[name=email]').val();
-                      $('#followupForm').find('input[name=email]').val(email);
-                          }
-                      });
+                var email = formId.find('input[name=email]').val();
+                $('#followupForm').find('input[name=email]').val(email);
             };
 
             $(window).on("scroll", function() {
@@ -479,16 +478,17 @@
                     success: function(data) {
                       ga('send', 'followup');
                       fbq('track', 'CompleteRegistration');
-                      $('#thanksContainer').removeClass('hidden');
-                      $('#bottomFormContainer').hide();
-                      $('#followupContainer').hide();
-                      $('html,body').animate({
-                          scrollTop: $("footer").offset().top
-                      },'slow');
                     }
                 });
 
+                $('#followupContainer').hide();
+                $('#thanksContainer').removeClass('hidden');
+                $('html,body').animate({
+                    scrollTop: $("footer").offset().top
+                },'slow');
+
             });
+
             $('#firstForm').on('submit', signup);
             $('#bottomForm').on('submit', signup);
 
