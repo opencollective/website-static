@@ -6,11 +6,7 @@ const favicon = require('serve-favicon');
 const request = require('request');
 const config = require('config');
 
-const controllers = {}
-
-controllers.api = require('./api');
-controllers.apply = require('./apply');
-controllers.collectives = require('./collectives');
+const controllers = require('./controllers');
 
 module.exports = (app) => {
   /**
@@ -21,12 +17,12 @@ module.exports = (app) => {
   /**
    * Favicon
    */
-  app.use(favicon(__dirname + '/../public/images/favicon.ico.png'));
+  app.use(favicon(__dirname + '/public/images/favicon.ico.png'));
 
   /**
    * Static folder
    */
-  app.use('/public', express.static(path.join(__dirname, '../public')));
+  app.use('/public', express.static(path.join(__dirname, '/public')));
   // Serving /static from the app server #hack
   app.use('/static', (req, res, next) => {
     req.pipe(request(config.host.app + '/static' + req.url)).pipe(res);
@@ -35,7 +31,7 @@ module.exports = (app) => {
   /**
    * /robots.txt 
    */
-  app.get('/robots.txt', (req, res) => res.sendFile(path.resolve(__dirname + '/../public/robots.txt')));
+  app.get('/robots.txt', (req, res) => res.sendFile(path.resolve(__dirname + '/public/robots.txt')));
 
   /**
    * Pipe the requests before the middlewares, the piping will only work with raw
@@ -62,21 +58,15 @@ module.exports = (app) => {
     res.render('homepage', { meta } );
   });
 
-  app.get('/faq', (req, res) => {
-    res.render('faq', { meta } );
-  });
+  app.get('/faq', (req, res) => res.render('faq', { meta } ) );
+  app.get('/about', (req, res) => res.render('about', { meta } ) );
   
-  /**
-   * Collectives' public page
-   */
-  app.get('/:slug([A-Za-z0-9-]+)', controllers.collectives.publicPage);
-  
-  app.use(function (err, req, res, next) {
+  app.use((err, req, res, next) => {
     console.error(err);
     err.statusCode = err.statusCode || 500;
     res.status(err.statusCode);
 
-    if(app.set('env') == 'development')
+    if(app.set('env') === 'development')
       res.send(err.message);
     else
       res.sendStatus(err.statusCode);

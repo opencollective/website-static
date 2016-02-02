@@ -17,7 +17,7 @@ module.exports = (req, res) => {
   mailOptions.text = email + ' Requested to join the beta for OpenCollective';
   mailOptions.html = '<a mailto:'+email+'/>'+email+'</a> Has requested to join OpenCollective';
 
-  emaillib.sendResponseEmail(email);
+  emaillib.sendResponseEmail(email, (err) => console.error(err) );
 
   var collective = req.body.collective;
   var size = req.body.size;
@@ -36,7 +36,8 @@ module.exports = (req, res) => {
   console.log("Sending email", mailOptions);
 
   // send email to ops@opencollective.com
-  emaillib.sendMail(mailOptions, function(error) {
+  emaillib.sendMail(mailOptions, (err) => {
+    if(err) console.error(err);
     return res.send("registration sent");
   });
 
