@@ -62,13 +62,15 @@ module.exports = (app) => {
   app.get('/about', (req, res) => res.render('about', { meta } ) );
   
   app.use((err, req, res, next) => {
-    console.error(err);
-    err.statusCode = err.statusCode || 500;
-    res.status(err.statusCode);
+    if(err) {
+      console.error(err, err.stack);
+      err.statusCode = err.statusCode || 500;
+      res.status(err.statusCode);
 
-    if(app.set('env') === 'development')
-      res.send(err.message);
-    else
-      res.sendStatus(err.statusCode);
+      if(app.set('env') === 'development')
+        res.send(err.message);
+      else
+        res.sendStatus(err.statusCode);
+    }
   }); 
 }
