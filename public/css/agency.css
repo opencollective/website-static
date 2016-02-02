@@ -296,6 +296,9 @@ h3.tagline {
 #thanksContainer h3 {
   font-size: 14px;
 }
+#thanksContainer img {
+  max-width: 400px;
+}
 img.stepsIcons {
   width: 60px;
   height: 60px;
