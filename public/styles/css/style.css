@@ -42,18 +42,22 @@ table {
   font-family: "bold";
   src: url("../../assets/fonts/bold.eot");
   src: url("../../assets/fonts/bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/bold.woff") format("woff"), url("../../assets/fonts/bold.woff2") format("woff"), url("../../assets/fonts/bold.ttf") format("truetype"), url("../../assets/fonts/bold.svg#bold") format("svg"); }
+
 @font-face {
   font-family: "semibold";
   src: url("../../assets/fonts/semibold.eot");
   src: url("../../assets/fonts/semibold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/semibold.woff") format("woff"), url("../../assets/fonts/semibold.woff2") format("woff"), url("../../assets/fonts/semibold.ttf") format("truetype"), url("../../assets/fonts/semibold.svg#semibold") format("svg"); }
+
 @font-face {
   font-family: "italic";
   src: url("../../assets/fonts/italic.eot");
   src: url("../../assets/fonts/italic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/italic.woff") format("woff"), url("../../assets/fonts/italic.woff2") format("woff"), url("../../assets/fonts/italic.ttf") format("truetype"), url("../../assets/fonts/italic.svg#italic") format("svg"); }
+
 @font-face {
   font-family: "regular";
   src: url("../../assets/fonts/regular.eot");
   src: url("../../assets/fonts/regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/regular.woff") format("woff"), url("../../assets/fonts/regular.woff2") format("woff"), url("../../assets/fonts/regular.ttf") format("truetype"), url("../../assets/fonts/regular.svg#regular") format("svg"); }
+
 .container {
   padding-right: 4%;
   padding-left: 4%;
@@ -342,14 +346,12 @@ table {
   .container {
     padding-left: 6%;
     padding-right: 6%; }
-
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     -ms-flex-preferred-size: 100%;
     -webkit-flex-basis: 100%;
     flex-basis: 100%;
     max-width: 100%;
     margin-left: 0; }
-
   header .col-2 {
     -ms-flex-preferred-size: 10%;
     -webkit-flex-basis: 10%;
@@ -362,9 +364,9 @@ table {
     flex-basis: 90%;
     max-width: 90%;
     margin-left: 0; }
-
   form input[type="text"], form input[type="email"] {
     margin-bottom: 6%; } }
+
 body {
   font-size: 20px;
   color: #4f5e70;
@@ -421,9 +423,11 @@ a {
 
 form input, form button, form textarea, form select {
   font-size: 16px; }
+
 form button {
   font-family: 'bold', sans-serif;
   font-weight: normal; }
+
 form input, form textarea {
   font-family: 'italic', sans-serif;
   font-weight: normal; }
@@ -456,22 +460,27 @@ header {
 
 body:not(#home) .pushdown {
   margin-top: 60px; }
+
 body:not(#home) .amount {
   display: inline-block;
   width: 60px; }
+
 body:not(#home) h3 {
   color: #46b0ed;
   margin-top: 40px; }
   body:not(#home) h3 a {
     color: #46b0ed; }
+
 body:not(#home) h4 {
   color: #46b0ed;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 5px;
   font-size: 13pt; }
+
 body:not(#home) p {
   margin: 10px 0px; }
+
 body:not(#home) ul.list li {
   font-size: 18px; }
   body:not(#home) ul.list li:before {
@@ -501,7 +510,8 @@ section {
     display: block; }
   section#steps {
     background: #fff url("../../assets/gradient02.png") top center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    padding-bottom: 30px; }
     section#steps .instructions h3 {
       font-family: 'bold', sans-serif;
       font-weight: normal; }
@@ -534,8 +544,10 @@ section {
 form textarea, form select, form option, form button, form input {
   width: 100%;
   margin: 1% 0 4% 0; }
+
 form textarea {
   height: 120px; }
+
 form input[type="text"], form input[type="email"], form textarea {
   background-color: rgba(248, 250, 249, 0.5);
   color: #3e4448;
@@ -587,9 +599,11 @@ form input[type="text"], form input[type="email"], form textarea {
       color: #46b0ed; }
     form input[type="text"]:hover:-ms-input-placeholder, form input[type="text"].hover:-ms-input-placeholder, form input[type="email"]:hover:-ms-input-placeholder, form input[type="email"].hover:-ms-input-placeholder, form textarea:hover:-ms-input-placeholder, form textarea.hover:-ms-input-placeholder {
       color: #46b0ed; }
+
 form label {
   font-family: 'semibold', sans-serif;
   font-weight: normal; }
+
 form input {
   border: 0 none;
   padding: 11px 20px 12px;
@@ -610,6 +624,7 @@ form input {
   background-color: rgba(248, 250, 249, 0.5); }
   form input:hover, form input:active {
     background-color: rgba(248, 250, 249, 0.8); }
+
 form button, form input[type="submit"] {
   border: 0 none;
   color: #fff;
@@ -634,6 +649,7 @@ form button, form input[type="submit"] {
   text-align: center; }
   form button:hover, form input[type="submit"]:hover {
     background-color: #c41752; }
+
 form select {
   -moz-appearance: none;
   -webkit-appeareance: none;
@@ -722,6 +738,7 @@ footer {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0; }
+
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px; }
 
@@ -734,28 +751,20 @@ footer {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 40px; }
-
   h2, h3 {
     font-size: 20px;
     line-height: 28px; }
-
   h2 {
     padding-bottom: 6%; }
-
   body {
     font-size: 15px; }
-
   footer img {
     width: 50%; }
-
   .menu li a {
     font-size: 9px; }
-
   .instructions {
     margin-bottom: 20px; }
-
   .bpush-1 {
     padding-bottom: 6%; }
-
   section:first-of-type {
     padding-top: 18%; } }

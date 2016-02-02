@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{meta.title}}</title>
+
+    <link rel="shortcut icon" type="image/png" href="/public/images/favicon.ico.png"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{meta.twitter}}" />
+    <meta name="twitter:title" content="{{meta.title}}" />
+    <meta name="twitter:description" content="{{meta.description}}" />
+    <meta name="twitter:image" content="{{meta.image}}" />
+
+    <meta property="og:url" content="{{meta.url}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{meta.title}}" />
+    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:image" content="{{meta.image}}" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/public/css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/public/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="/public/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="/public/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                  <img src="/public/images/icon.svg" width="40" height="40" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#how">How it works</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#usecases">Use cases</a>
+                    </li>
+                    <li>
+                        <a class="" href="/faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    {{{body}}}
+    
+    <footer>
+      <div class="container" id="contact">
+          <div class="row">
+              <div class="col-md-4">
+                  <span class="copyright">Stay in touch or get in touch!</span>
+              </div>
+              <div class="col-md-4">
+                  <ul class="list-inline social-buttons">
+                      <li><a href="https://twitter.com/opencollect"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="mailto:info@opencollective.com"><i class="fa fa-envelope-o"></i></a></li>
+                      <li><a href="https://medium.com/open-collective"><i class="fa fa-medium"></i></a></li>
+                      <li><a href="https://slack.open.collective.com"><i class="fa fa-slack"></i></a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <ul class="list-inline quicklinks">
+                      <li><a href="/about">About</a>
+                      </li>
+                      <!--<li><a href="#">Terms of Use</a>-->
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>  
+
+  <!-- jQuery -->
+  <script src="/public/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="/public/js/bootstrap.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="/public/js/classie.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="/public/js/cbpAnimatedHeader.js"></script>
+  <script src="/public/js/agency.js"></script>
+
+  {{> google_analytics}}
+  </body>
+</html>

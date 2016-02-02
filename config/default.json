@@ -1,0 +1,13 @@
+{
+  "env": "NODE_ENV",
+  "mailgun": {
+    "user": "MAILGUN_USER",
+    "password": "MAILGUN_PASSWORD"
+  },
+  "apiKey": "0ac43519edcf4421d80342403fb5985d",
+  "host": {
+    "api": "http://localhost:3060",
+    "app": "http://localhost:3000",
+    "website": "WEBSITE_URL"
+  }
+}

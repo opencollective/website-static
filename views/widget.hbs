@@ -1,0 +1,17 @@
+<img src="{{collective.logo}}" />
+<h1>{{collective.name}}</h1>
+<p class="shortdescription">{{collective.description}}</p>
+<h2>Latest transactions</h2>
+
+<ul>
+{{#each transactions}}
+  <li>{{> Transaction}}
+{{/each}}
+</ul>
+
+<ul>
+{{#each users}}
+  <li>{{> UserProfilePhoto}}
+{{/each}}
+</ul>
+
