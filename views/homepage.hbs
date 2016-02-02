@@ -4,7 +4,7 @@
             <div class="intro-text">
                 <div class="intro-lead-in"><img src="/public/images/word.svg"></div>
                 <div class="intro-heading"><h3 class="tagline">Recurring funding for groups</h3></div>
-                
+
                 <a href="#signup" id="signupBtn" class="page-scroll btn btn-xl">Sign Up for Private Beta</a>
                 <div id="thanksContainer" class="container hidden">
                   <div class="row center">
@@ -26,12 +26,12 @@
               </div>
               <div class="col-sm-6 text-center">
                 <h2 class="section-heading">Do Great Things Together</h2>
-                <h3 class="section-subheading text-muted">Collect money, allow members to submit expenses and let anyone see your budget.</h3>
+                <h3 class="section-subheading text-muted">Collect money, submit expenses and let anyone see your budget.</h3>
               </div>
-            </div>          
+            </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section id="how">
         <div class="container">
@@ -48,7 +48,7 @@
                         <img src="/public/images/icon1.svg" class="stepsIcons" />
                     </span>
                     <h4 class="service-heading">Create</h4>
-                    <p class="text-muted">Connect your PayPal account and we take care of the rest. We provide an interface to let everyone in the collective see how much money has been collected, how much is left and where it went.</p>
+                    <p class="text-muted">Connect your PayPal account and we take care of the rest. Everyone in the collective can see total money collected, how much is left and where it was spent.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -56,7 +56,7 @@
                         <img src="/public/images/icon2.svg" class="stepsIcons" />
                     </span>
                     <h4 class="service-heading">Collect</h4>
-                    <p class="text-muted">Your collective gets a public page where you can present your mission and your activities. People can donate an amount of their choice on a monthly basis.</p>
+                    <p class="text-muted">Share your mission and activities on your collective's public page. People can support you with any amount on a monthly basis.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -64,22 +64,22 @@
                         <img src="/public/images/icon3.svg" class="stepsIcons" />
                     </span>
                     <h4 class="service-heading">Spend</h4>
-                    <p class="text-muted">Anyone in your collective can submit expenses through the app. The creator of the collective who connected their PayPal account can approve those expenses with one quick tap.</p>
+                    <p class="text-muted">Anyone in your collective can submit expenses. The owner of the collective can approve those expenses with one tap.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="usecases">
+
+    <section id="usecases" class='bg-light-gray'>
       <div class="container" id="wwcode">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Supercharge Your Local Chapters</h2>
                 <h3 class="section-subheading text-muted">"Women Who Code" uses Open Collective to empower local chapters to raise funds and have their own budget.</h3>
+                <img src="http://cos.h-cdn.co/assets/14/39/1600x800/nrm_1411501798-140922-cosmo-women-who-code-0464.jpg">
                 <h3 class="section-subheading text-muted">
                   View their open collectives: <a href="/wwcodeatl">Atlanta</a> - <a href="/wwcodeaustin">Austin</a> - <a href="/wwcodenyc">New York</a> - <a href="/wwcodesf">San Francisco</a> - <a href="/wwcode-seattle">Seattle</a>
                 </h3>
-                <img src="http://cos.h-cdn.co/assets/14/39/1600x800/nrm_1411501798-140922-cosmo-women-who-code-0464.jpg">
             </div>
         </div>
       </div>
@@ -91,8 +91,8 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Fund a Side Project</h2>
                 <h3 class="section-subheading text-muted">Yeoman – an open source project – uses Open Collective to share their expenses and let their community chip in.</h3>
-                <h3 class="section-subheading text-muted"><a href="/yeoman">View their open collective</a></h3>
                 <img src="http://yeoman.io/static/illustration-home-inverted.1f863f34ba.png" />
+                <h3 class="section-subheading text-muted"><a href="/yeoman">View their open collective</a></h3>
             </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">A Network of Hosts</h2>
-                <h3 class="section-subheading text-muted">We are building a network of host organizations; legal entities that host Open Collectives under their umbrella. They are the heroes that empower people in their community to create associations without friction.</h3>
+                <h3 class="section-subheading text-muted">We are building a network of host organizations - legal entities that host Open Collectives under their umbrella. They are the heroes that empower people in their community to create associations without friction.</h3>
                 <img src="/public/images/earth-placeholder.png">
             </div>
         </div>
@@ -175,7 +175,7 @@
         </div>
     </section>
 
-    
+
     <!-- Contact Section -->
     <section id="signup">
         <div class="container">
@@ -220,7 +220,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
@@ -229,7 +229,7 @@
     <!-- Contact Form JavaScript -->
     <script src="/public/js/jqBootstrapValidation.js"></script>
     <script src="/public/js/contact_me.js"></script>
-    
+
     <script type="text/javascript">
 
   /* Gets parameters from URL */
@@ -245,9 +245,9 @@
     }
     return null;
   }
-  
+
  var source = getUrlParameter('source') || 'homepage';
- 
+
   $("#signupForm").on('submit', function(e){
     e.preventDefault();
     $.ajax({
@@ -259,11 +259,11 @@
         fbq('track', 'CompleteRegistration');
       }
     });
-    
+
     $('#thanksContainer').removeClass('hidden');
     $('#signupBtn').hide();
     $('#signup').hide();
-    
+
     $('html,body').animate({
       scrollTop: $("body").offset().top
     },'fast');
