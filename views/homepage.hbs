@@ -254,7 +254,7 @@
       data:$(this).serialize()+'&source='+source,
       method: 'post',
       success: function(data) {
-        ga('send', 'followup');
+        ga('send', 'event', 'form', 'submit', 'apply');
         fbq('track', 'CompleteRegistration');
       }
     });
