@@ -128,6 +128,14 @@
   <script src="/public/js/cbpAnimatedHeader.js"></script>
   <script src="/public/js/agency.js"></script>
 
+  <script>
+    if(window.location.hash) {
+      $('html,body').animate({
+        scrollTop: $(window.location.hash).offset().top - 100
+      },'fast');
+    }
+  </script>
+
   {{> google_analytics}}
   </body>
 </html>
