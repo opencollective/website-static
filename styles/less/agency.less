@@ -651,18 +651,8 @@ aside.clients {
 
 // Contact Section
 
-section#signup {
-	background-color: @gray;
-	background-image: url('/public/images/map-image.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	.section-heading {
-		color: white;
-	}
-  h3 {
-    color: white;
-  }
-	.form-group {
+section#newsletter, section#signup {
+  	.form-group {
 		margin-bottom: 25px;
 		input,
 		textarea {
@@ -702,6 +692,28 @@ section#signup {
 	.text-danger {
 		color: @brand-danger;
 	}
+}
+
+section#newsletter {
+  input {
+    margin: 10px 0px;
+  }
+  .button {
+    padding: 18px 40px;
+  }
+}
+
+section#signup {
+	background-color: @gray;
+	background-image: url('/public/images/map-image.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	.section-heading {
+		color: white;
+	}
+  h3 {
+    color: white;
+  }
 }
 
 
