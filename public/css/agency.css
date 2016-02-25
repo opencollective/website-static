@@ -645,37 +645,29 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
-section#newsletter .form-group,
 section#signup .form-group {
   margin-bottom: 25px;
 }
-section#newsletter .form-group input,
 section#signup .form-group input,
-section#newsletter .form-group textarea,
 section#signup .form-group textarea {
   padding: 20px;
 }
-section#newsletter .form-group input.form-control,
 section#signup .form-group input.form-control {
   height: auto;
 }
-section#newsletter .form-group textarea.form-control,
 section#signup .form-group textarea.form-control {
   height: 322px;
 }
-section#newsletter .form-control:focus,
 section#signup .form-control:focus {
   border-color: #46b0ed;
   box-shadow: none;
 }
-section#newsletter ::-webkit-input-placeholder,
 section#signup ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#newsletter :-moz-placeholder,
 section#signup :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -683,7 +675,6 @@ section#signup :-moz-placeholder {
   font-weight: 700;
   color: #bbbbbb;
 }
-section#newsletter ::-moz-placeholder,
 section#signup ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -691,22 +682,14 @@ section#signup ::-moz-placeholder {
   font-weight: 700;
   color: #bbbbbb;
 }
-section#newsletter :-ms-input-placeholder,
 section#signup :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #bbbbbb;
 }
-section#newsletter .text-danger,
 section#signup .text-danger {
   color: #e74c3c;
-}
-section#newsletter input {
-  margin: 10px 0px;
-}
-section#newsletter .button {
-  padding: 18px 40px;
 }
 section#signup {
   background-color: #4f5e70;
@@ -719,6 +702,12 @@ section#signup .section-heading {
 }
 section#signup h3 {
   color: white;
+}
+section#signup input {
+  margin: 10px 0px;
+}
+section#signup .button {
+  padding: 18px 40px;
 }
 footer {
   padding: 25px 0;
