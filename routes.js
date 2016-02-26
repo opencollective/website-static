@@ -55,12 +55,15 @@ module.exports = (app) => {
   }
 
   app.get('/', (req, res) => {
-    res.render('homepage', { meta } );
+    res.render('homepage', { meta, mailchimp_list_id: "14d6233180" } );
   });
 
   app.get('/faq', (req, res) => res.render('faq', { meta } ) );
   app.get('/about', (req, res) => res.render('about', { meta } ) );
   
+  app.get('/meetups', (req, res) => res.render('meetups', { meta, mailchimp_list_id: "06c7d54ba2" } ) );  
+  app.get('/opensource', (req, res) => res.render('opensource', { meta, mailchimp_list_id: "dcc832cd00" } ) );
+    
   app.use((err, req, res, next) => {
     if(err) {
       console.error(err, err.stack);
