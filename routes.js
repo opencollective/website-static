@@ -29,7 +29,7 @@ module.exports = (app) => {
   });
 
   /**
-   * /robots.txt
+   * /robots.txt 
    */
   app.get('/robots.txt', (req, res) => res.sendFile(path.resolve(__dirname + '/public/robots.txt')));
 
@@ -39,11 +39,11 @@ module.exports = (app) => {
    * More infos: https://github.com/request/request/issues/1664#issuecomment-117721025
    */
   app.all('/api/*', controllers.api);
-
+  
   app.post('/apply', controllers.apply);
-
+  
   app.get('/:slug/widget', controllers.collectives.widget);
-
+  
   app.locals.SHOW_GA = process.env.NODE_ENV === 'production';
 
   var meta = {
@@ -60,10 +60,10 @@ module.exports = (app) => {
 
   app.get('/faq', (req, res) => res.render('faq', { meta } ) );
   app.get('/about', (req, res) => res.render('about', { meta } ) );
-
-  app.get('/meetups', (req, res) => res.render('meetups', { meta, mailchimp_list_id: "06c7d54ba2" } ) );
-  app.get('/opensourcehp', (req, res) => res.render('opensource', { meta, mailchimp_list_id: "dcc832cd00" } ) );
-
+  
+  app.get('/meetups', (req, res) => res.render('meetups', { meta, mailchimp_list_id: "06c7d54ba2" } ) );  
+  app.get('/opensource', (req, res) => res.render('opensource', { meta, mailchimp_list_id: "dcc832cd00" } ) );
+    
   app.use((err, req, res, next) => {
     if(err) {
       console.error(err, err.stack);
@@ -75,5 +75,5 @@ module.exports = (app) => {
       else
         res.sendStatus(err.statusCode);
     }
-  });
+  }); 
 }
