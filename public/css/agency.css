@@ -840,3 +840,52 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #46b0ed;
 }
+#usecases .call-to-action {
+  position: relative;
+  letter-spacing: .5px;
+  width: 100%;
+  background-color: black;
+  background-image: url(/public/images/pattern.png);
+  color: white;
+  padding: 54px 20px 40px 20px;
+  text-align: center;
+}
+#usecases .call-to-action .arrow-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #F7F7F7;
+  margin: auto;
+}
+#usecases .call-to-action .line1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#usecases .call-to-action .line2 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#usecases .call-to-action .button {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 270px;
+  height: 46px;
+  border-radius: 50px;
+  background-color: #75cc1f;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 14px 24px;
+}
+#usecases .call-to-action .button:hover {
+  opacity: .96;
+}
+#usecases .call-to-action a {
+  text-decoration: none;
+}
