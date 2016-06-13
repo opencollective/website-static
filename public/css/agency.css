@@ -841,6 +841,7 @@ body {
   webkit-tap-highlight-color: #46b0ed;
 }
 #usecases .call-to-action {
+  font-family: "Montserrat-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   letter-spacing: .5px;
   width: 100%;
