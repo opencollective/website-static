@@ -1,5 +1,7 @@
 # Open Collective website
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/opencollective/website-static.svg?token=fbd71b210dce0fcd78ddd28d8d6564314d7703a3a1e55a5371ca84a178ac751a&ts=1526636225186)](https://greenkeeper.io/)
+
 This Node server 
 
 ## Development rules
